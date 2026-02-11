@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | School Management</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen flex items-center justify-center p-4">
+
+    <div class="relative w-full max-w-2xl">
+        
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+
+        <div class="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
+                    Admin <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Portal</span>
+                </h1>
+                <p class="text-slate-300 text-lg font-light">Manage your schools and records efficiently.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <a href="{% url 'list' %}" class="group relative p-6 bg-gradient-to-br from-white/5 to-white/10 border border-white/10 rounded-2xl hover:border-purple-500/50 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-purple-500/20 text-decoration-none">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="h-12 w-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 text-purple-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 17.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>                              
+                        </div>
+                        <h2 class="text-xl font-semibold text-white mb-1 group-hover:text-purple-300 transition-colors">School List</h2>
+                        <p class="text-sm text-slate-400">View detailed records of all registered schools.</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'create' %}" class="group relative p-6 bg-gradient-to-br from-white/5 to-white/10 border border-white/10 rounded-2xl hover:border-pink-500/50 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-pink-500/20 text-decoration-none">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="h-12 w-12 bg-pink-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 text-pink-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-white mb-1 group-hover:text-pink-300 transition-colors">Add School</h2>
+                        <p class="text-sm text-slate-400">Register a new school into the database.</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-xs text-slate-500">System Admin Dashboard v1.0</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body>
+
+</html>
