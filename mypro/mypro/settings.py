@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://cbv-crud.koyeb.app',
+    'https://*.koyeb.app'
+]
+
 
 # Application definition
 
